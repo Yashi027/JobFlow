@@ -12,7 +12,10 @@ import applicationRoutes from './routes/applicationRoutes.js'
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://job-flow-uar7.vercel.app',
+  credentials: true
+}))
 app.use(express.json());
 
 app.use('/api', applicationRoutes)
