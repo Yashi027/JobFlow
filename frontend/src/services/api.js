@@ -1,7 +1,8 @@
 import axios from 'axios'
 
-const API = axios.create({
-  baseURL: 'http://localhost:5000/api'
+const api = axios.create({
+  baseURL: 'https://job-flow-xi.vercel.app/api',
+  withCredentials: true
 })
 
-export default API
+export default api
